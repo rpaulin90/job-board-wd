@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <p>
+    <p style={{position: 'fixed', left: 0, bottom: 0, width: '100%', textAlign: 'center'}}>
       <Link href={"/about"}>
         <a className="text-xs">[ about ]</a>
       </Link>
