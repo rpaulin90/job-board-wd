@@ -7,7 +7,7 @@ const Layout = (props) => {
         <div style={{padding: '1rem', margin: 'auto', maxWidth: '800px', minWidth: '500px'}}>
             <Head>
                 <title>Workday Job Board</title>
-                <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.css@7.3.1/themes/reset-min.css" integrity="sha256-t2ATOGCtAIZNnzER679jwcFcKYfLlw01gli6F6oszk8=" crossorigin="anonymous"/>
+                <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.css@7.3.1/themes/reset-min.css" integrity="sha256-t2ATOGCtAIZNnzER679jwcFcKYfLlw01gli6F6oszk8=" crossOrigin="anonymous"/>
 
 
 

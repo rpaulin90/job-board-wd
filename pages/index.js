@@ -18,16 +18,19 @@ import { Button, Image, Card,Accordion, Icon,Loader,Label,Grid, Message } from '
 import algoliasearch from 'algoliasearch/lite';
 import { InstantSearch, Hits, Configure } from "react-instantsearch-dom";
 
-let ALGOLIA_ID: string = 'BGL7RGZIZD'
-let ALGOLIA_API_KEY: string = '32ee469ade65249d17dfb94019fcf120'
 
 
 
-const searchClient = algoliasearch(ALGOLIA_ID, ALGOLIA_API_KEY);
 
 
-const Index = (props: any) => {
 
+
+
+const Index = (props) => {
+
+    const ALGOLIA_ID = process.env.ALGOLIA_ID;
+    const ALGOLIA_API_KEY = process.env.ALGOLIA_API_KEY;
+    const searchClient = algoliasearch(ALGOLIA_ID, ALGOLIA_API_KEY);
     const [activeIndex, setActiveIndex] = useState('');
     const db = firebase.firestore();
     const { AuthUserInfo } = props;
@@ -80,7 +83,7 @@ const Index = (props: any) => {
         }
     );
 
-    const handleAccordionClick = (id:string) => {
+    const handleAccordionClick = (id) => {
         const index = id === activeIndex ? '' : id;
         setActiveIndex(index)
     }
